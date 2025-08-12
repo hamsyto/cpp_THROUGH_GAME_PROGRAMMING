@@ -9,25 +9,25 @@ int main()
 	int tries = 0;
 	int guess;
 	int secretNumber;
-	int x = 100, y = 1;
-	cout << "\tWelcome to Guess Му Number\n\n";
+	int x = 100;
+	cout << "\tWelcome to Guess ГЊГі Number\n\n";
 
-	cout << "Enter а secretNumber 0 - 100: ";
+	cout << "Enter Г  secretNumber 0 - 100: ";
 	cin >> secretNumber;
 
 	do
 	{
 		++tries;
-		srand(static_cast<unsigned int>(time(0))); // запускаем генератор случайных чисел
-		guess = rand() % x + 1; //случайное число в диапазоне от 1 до 100
+		srand(static_cast<unsigned int>(time(0))); // Г§Г ГЇГіГ±ГЄГ ГҐГ¬ ГЈГҐГ­ГҐГ°Г ГІГ®Г° Г±Г«ГіГ·Г Г©Г­Г»Гµ Г·ГЁГ±ГҐГ«
+		guess = rand() % x + 1; //Г±Г«ГіГ·Г Г©Г­Г®ГҐ Г·ГЁГ±Г«Г® Гў Г¤ГЁГ ГЇГ Г§Г®Г­ГҐ Г®ГІ 1 Г¤Г® 100
 		if (guess > secretNumber)
 		{
-			cout << "Тоо high!\n\n";
+			cout << "Г’Г®Г® high!\n\n";
 			x = guess;
 		}
 		else if (guess < secretNumber)
 		{
-			cout << "Тоо low!\n\n";
+			cout << "Г’Г®Г® low!\n\n";
 		}
 		else
 		{
@@ -36,4 +36,5 @@ int main()
 	} while (guess != secretNumber);
 
 	return 0;
+
 }
